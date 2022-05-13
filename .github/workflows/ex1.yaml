@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Npm-install:
+  npm-install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -11,7 +11,8 @@ jobs:
         with:
           node-version: 14
       - run: npm install
-  Npm-run-test:
+  npm-run-test:
+    needs: npm-install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

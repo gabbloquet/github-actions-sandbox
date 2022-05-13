@@ -7,7 +7,7 @@ jobs:
     strategy:
       max-parallel: 6
       matrix:
-        version: [14, lts/*]
+        version: [12, 14, lts/*]
         os: [ubuntu-latest, ubuntu-18.04]
         include:
           - version: 12

@@ -14,7 +14,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
         env:
           NODE_VERSION: 14
-        run: |
+      - run: |
           node -v
       - name: run test
         shell: bash

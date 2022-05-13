@@ -1,9 +1,10 @@
-name: reusable workflow
+name: reusable workflow - npm test
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       node-version:
         description: node version
+        default: 'lts/*'
         required: false
         type: string
 

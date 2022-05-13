@@ -1,16 +1,9 @@
-name: reusable workflow caller
+name: Reusable Workflow called
 on:
-  workflow_call:
-    inputs:
-      node-version:
-        description: node version
-        required: false
-        type: string
+  workflow_dispatch:
 
 jobs:
-  call-npm-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/ex5.yaml
-        with:
-          node-version: '${{ inputs.node-version }}'
+  run-npm-test:
+    uses: ./.github/workflows/ex5.yaml #local
+    with:
+      node-version: 14

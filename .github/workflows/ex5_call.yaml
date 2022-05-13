@@ -1,9 +1,15 @@
 name: Reusable Workflow called
 on:
   workflow_dispatch:
+    inputs:
+      node-version:
+        description: node version
+        default: 'lts/*'
+        required: false
+        type: string
 
 jobs:
   run-npm-test:
     uses: ./.github/workflows/ex5.yaml #local
     with:
-      node-version: 14
+      node-version: ${{ github.event.inputs.node-version }}

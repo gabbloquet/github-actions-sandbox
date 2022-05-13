@@ -7,9 +7,11 @@ jobs:
     strategy:
       max-parallel: 6
       matrix:
-        version: [12, 14, lts/*]
+        version: [14, lts/*]
         os: [ubuntu-latest, ubuntu-18.04]
-    if: ( matrix.version == 12 && matrix.os == ubuntu-latest ) || matrix.version == 14 || matrix.version == lts/*
+        include:
+          - version: 12
+            os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout

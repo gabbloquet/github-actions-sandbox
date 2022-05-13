@@ -9,7 +9,7 @@ jobs:
       matrix:
         version: [12, 14, lts/*]
         os: [ubuntu-latest, ubuntu-18.04]
-    if: ( ${{ matrix.version }} == 12 && ${{ matrix.os }} == ubuntu-latest ) || ${{ matrix.version }} == 14 || ${{ matrix.version }} == lts/*
+    if: ( matrix.version == 12 && matrix.os == ubuntu-latest ) || matrix.version == 14 || matrix.version == lts/*
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout

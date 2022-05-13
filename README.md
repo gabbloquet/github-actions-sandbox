@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Github actions sandbox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+This is a project exemple just to train.  
+
+[Training](https://docs.google.com/document/d/1Shzft05aqn1iOw_BZAzpPkZ5jeREWXBN7Mbd1TgOBhU/edit#).
 
 ## Available Scripts
 

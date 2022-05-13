@@ -1,0 +1,17 @@
+name: reusable workflow caller
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: node version
+        required: false
+        type: string
+
+jobs:
+  call-npm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+      - uses: ./.github/workflows/ex5.yaml
+        with:
+          node-version: '${{ inputs.node-version }}'
